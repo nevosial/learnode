@@ -24,17 +24,16 @@ rl.question("What is your name ? ", function(answer) {
 		Person.sayings.push(saying.trim());
 
 		if (saying.toLowerCase().trim() === 'exit') {
-//        fs.writeFile("./rant.txt" , "hello world" , "UTF-8" ,  function(err){
-//          if(err) throw err;
-//          console.log("File has been saved.")
-//        });
+        var st = JSON.stringify(Person);
+        fs.writeFileSync("./rant.txt" , st , "UTF-8" ,  function(err){
+        if(err) throw err;
+          console.log("File has been saved.")
+                });
 			rl.close();
 		} else {
 			rl.setPrompt(`What else would ${Person.name} say? ('exit' to leave) `);
 		    rl.prompt();
         }
-
-
 	});//end the on eventListener
 
 });//end of question
