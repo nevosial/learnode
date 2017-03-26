@@ -36,3 +36,13 @@ app.get('/speakers' , function(request, response){
     ${info}
     `);
 });
+
+//Adding a new route to get data from one speaker.
+app.get('/speakers/:speakerid' , function(request , response){
+  var spk = dataFile.speakers[request.params.speakerid];
+  response.send(`
+    <h2>${spk.name}</h2>
+    <p>${spk.title}</p>
+    <p>${spk.summary}</p>
+    `);
+});
