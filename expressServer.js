@@ -12,6 +12,15 @@ var myServer = app.listen(3000 , function(){
 
 //In express, we do not need to worry about headers, content-type.
 app.get('/' , function(request, response){
+  response.send(`
+    <h1>Renowned Speakers</h1>
+    <p>We have got together some great speakers from around the world who will help us with understanding the intricacies of the world.</p>
+    <p>lorem</p>
+    `);
+});
+
+//Adding a new route to the speakers page of the app
+app.get('/speakers' , function(request, response){
   var info = '';
   dataFile.speakers.forEach(function(item){
     //using `template string` supported in ES6.
