@@ -1,9 +1,11 @@
 //This is a new route holding speakers data.
+var express = require('express');
+var router = express.Router();
 
-
+var dataFile = require('../data/data.json');
 
 //Adding a new route to the speakers page of the app
-app.get('/speakers' , function(request, response){
+router.get('/speakers' , function(request, response){
   var info = '';
   dataFile.speakers.forEach(function(item){
     //using `template string` supported in ES6.
@@ -21,7 +23,7 @@ app.get('/speakers' , function(request, response){
 });
 
 //Adding a new route to get data from one speaker.
-app.get('/speakers/:speakerid' , function(request , response){
+router.get('/speakers/:speakerid' , function(request , response){
   var spk = dataFile.speakers[request.params.speakerid];
   response.send(`
     <h2>${spk.name}</h2>
@@ -29,3 +31,5 @@ app.get('/speakers/:speakerid' , function(request , response){
     <p>${spk.summary}</p>
     `);
 });
+
+module.exports = router;
