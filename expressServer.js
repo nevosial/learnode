@@ -8,6 +8,7 @@ var dataFile = require('./data/data.json');
 
 //Get the details of the route.
 app.use(require('./routes/index'));
+app.use(require('./routes/speakers'));
 
 //creating the server.
 var myServer = app.listen(3000 , function(){
