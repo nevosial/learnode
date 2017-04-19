@@ -1,3 +1,4 @@
+//Ex 3 : do it synchronously
 //Read the file synchronously and print the number of newlines it contains.
 var fs = require('fs');
 var path = process.argv[2]
