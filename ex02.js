@@ -1,3 +1,4 @@
+//Ex 2: Read input from the console and add the numbers.
 //var num = process.argv[2]
 var num = 0;
 var i = 2;
