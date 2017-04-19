@@ -5,3 +5,6 @@
 #### Express webs server that uses routes.
  - ./index.js
  -  speakers.js
+
+#### Added nodeshool items
+- learnyounode (ex named as ex01...ex0n)
