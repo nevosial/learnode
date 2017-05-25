@@ -2,7 +2,7 @@
 /***
 INPUT :  3 URLs as the first three command-line arguments.
 OUTPUT : Print the response(from each url) out in the same order as the URLs are provided to you as
-         command-line arguments.
+         command-line arguments..
 ***/
 
 var http = require('http');
