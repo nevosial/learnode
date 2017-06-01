@@ -38,7 +38,7 @@ rl.question("What is your name ? ", function(answer) {
 
 });//end of question
 
-
+//CLosing
 rl.on('close', function() {
 	console.log("%s is a real person that says %j", Person.name, Person.sayings);
   /**
