@@ -11,6 +11,18 @@ var biggest = function(){
  
  //invocation.
  console.log(biggest());
- 
- 
+
+
+
+//With arguments.
+var bigMan = function(c, d)
+{
+  var op;
+  c > d ? op = c : op = d;
+  console.log(c);
+}
+
+//invocation.
+console.log(bigMan(5,7));
+
  
