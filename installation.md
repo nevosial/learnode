@@ -7,5 +7,13 @@ Run the following command with root access
 To verify installation
 > node -v
 
+> npm -v
+  
+Output:
+> v8.5.0
+
+> 5.3.0
+  
+
 [Nodesource](https://github.com/nodesource/distributions) contains source, binary distributions for Nodejs.
 
